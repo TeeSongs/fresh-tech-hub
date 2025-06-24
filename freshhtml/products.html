@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Products - FreshTech</title>
+  <link rel="stylesheet" href="../freshCss/products.css" />
+</head>
+<body>
+  <!-- Reuse your navigation bar here -->
+  <header class="navbar">
+    <div class="brand">
+      <img src="../Assets/Images/freenet.svg" alt="Logo" />
+      <div class="logo">FreshTech</div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="cart.html" class="cart-link">Cart (<span id="cartCount">0</span>)</a>
+
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <!-- Product Filter/Search -->
+  <section class="filter-bar">
+    <input type="text" id="searchInput" placeholder="Search for products..." />
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+    </select>
+     <button id="clearFilters" class="btn clear-btn">Clear Filters</button>
+  </section>
+  <!-- All Products -->
+  <section class="products-page">
+    <h2 class="section-title">All Products</h2>
+    <div class="products-container" id="productGrid">
+      <!-- Product cards will be inserted here -->
+    </div>
+  </section>
+  <script src="js/cart.js"></script>
+  <script src="../fresh-js/products.js"></script>
+</body>
+</html>
