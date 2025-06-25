@@ -384,3 +384,17 @@ body {
     margin-top: 0.5rem;
   }
 }
+
+.cart-summary {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.checkout-actions .btn {
+  margin-top: 10px;
+  background: #0b5ed7;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+}
