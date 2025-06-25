@@ -5,11 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
-  const cartCount = document.getElementById("cartCount");
-  if (cartCount) cartCount.textContent = totalItems;
-}
+  let totalItems = 0;
 
+  for (let item of cart) {
+    totalItems += Number(item.qty) || 1; // fallback to 1 if qty is missing
+  }
+
+  const cartCount = document.getElementById("cartCount");
+  if (cartCount) {
+    cartCount.textContent = totalItems;
+  }
+}
 function renderCart() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const cartItems = document.getElementById("cartItems");
@@ -25,17 +31,20 @@ function renderCart() {
 
   let total = 0;
   cartItems.innerHTML = cart.map((item, index) => {
-    const itemTotal = item.qty * parseInt(item.price);
+    const qty = Number(item.qty) || 1;
+    const price = Number(item.price);
+    const itemTotal = qty * price;
     total += itemTotal;
+
     return `
       <div class="cart-item">
         <img src="${item.img}" alt="${item.name}">
         <div class="item-info">
           <h4>${item.name}</h4>
-          <p>Price: ₦${Number(item.price).toLocaleString()}</p>
+          <p>Price: ₦${price.toLocaleString()}</p>
           <div class="quantity-controls">
             <button class="decrease-btn" data-index="${index}">➖</button>
-            <span>${item.qty}</span>
+            <span>${qty}</span>
             <button class="increase-btn" data-index="${index}">➕</button>
           </div>
           <p>Total: ₦${itemTotal.toLocaleString()}</p>
@@ -46,6 +55,7 @@ function renderCart() {
   }).join("");
 
   cartTotal.textContent = total.toLocaleString();
+  updateCartCount();
 }
 
 // ✅ All button actions handled in one event listener

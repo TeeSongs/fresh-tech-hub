@@ -77,12 +77,18 @@ function filterProducts() {
 // Add to cart
 function addToCart(product) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
   const existing = cart.find(item => item.name === product.name);
 
   if (existing) {
     existing.qty = Number(existing.qty) + 1;
   } else {
-    cart.push({ ...product, qty: 1 });
+    cart.push({
+      name: product.name,
+      price: Number(product.price),
+      img: product.img,
+      qty: 1
+    });
   }
 
   localStorage.setItem("cart", JSON.stringify(cart));
@@ -92,13 +98,18 @@ function addToCart(product) {
 // Update cart count display
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const totalItems = cart.reduce((acc, item) => acc + Number(item.qty), 0);
-  const cartCount = document.getElementById("cartCount");
+  let totalItems = 0;
 
+  for (let item of cart) {
+    totalItems += Number(item.qty) || 1; // fallback to 1 if qty is missing
+  }
+
+  const cartCount = document.getElementById("cartCount");
   if (cartCount) {
     cartCount.textContent = totalItems;
   }
 }
+
 
 
 // Event: Clear filters
