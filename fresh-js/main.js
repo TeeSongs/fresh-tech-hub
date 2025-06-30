@@ -1,3 +1,8 @@
+document.getElementById("menuToggle").addEventListener ("click", function(){
+  const navLinks = document.getElementById("navLinks")
+  navLinks.classList.toggle("show")
+})
+
 // Select all "Add to Cart" buttons
 const addToCartButtons = document.querySelectorAll('.product-card .btn');
 
@@ -55,3 +60,7 @@ addToCartButtons.forEach(button => {
 
 // On page load, update cart count
 updateCartCount();
+
+
+// Add wishlist functionality
+

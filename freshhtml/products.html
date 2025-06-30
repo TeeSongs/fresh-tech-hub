@@ -8,22 +8,21 @@
 </head>
 <body>
   <!-- Reuse your navigation bar here -->
-  <header class="navbar">
-    <div class="brand">
-      <img src="../Assets/Images/freenet.svg" alt="Logo" />
-      <div class="logo">FreshTech</div>
-    </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="products.html" class="active">Products</a>
-      <a href="cart.html">
-      Cart (<span id="cartCount">0</span>)
-      </a>
+ <header class="navbar">
+  <div class="brand">
+    <img src="../Assets/Images/freenet.svg" alt="Logo" />
+    <div class="logo">FreshTech</div>
+    <button class="menu-toggle" id="menuToggle">&#9776;</button>
+  </div>
 
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
   <!-- Product Filter/Search -->
   <section class="filter-bar">
     <input type="text" id="searchInput" placeholder="Search for products..." />
@@ -38,6 +37,9 @@
     <div class="products-container" id="productGrid">
       <!-- Product cards will be inserted here -->
     </div>
+     <div class="load-more-container">
+    <button id="loadMoreBtn" class="btn load-more-btn">Load More</button>
+  </div>
   </section>
   <script src="../fresh-js/cart.js"></script>
   <script src="../fresh-js/products.js"></script>

@@ -1,8 +1,21 @@
+
+  const toggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+
 let products = [];
+
+let visibleCount = 8;
+let filteredProducts =[];
 
 const productGrid = document.getElementById("productGrid");
 const searchInput = document.getElementById("searchInput");
 const categoryFilter = document.getElementById("categoryFilter");
+const loadMoreBtn = document.getElementById("loadMoreBtn");
 const clearBtn = document.getElementById("clearFilters");
 
 // Load products
@@ -44,12 +57,16 @@ function capitalize(word) {
 
 // Display products in the grid
 function displayProducts(list) {
-  if (list.length === 0) {
+  filteredProducts = list; //Store the latest filtered list
+  const toDisplay= list.slice(0, visibleCount);
+
+  if (toDisplay.length === 0) {
     productGrid.innerHTML = `<p class="no-results">No products found.</p>`;
+    loadMoreBtn.style.display = "none";
     return;
   }
 
-  productGrid.innerHTML = list.map(product => `
+  productGrid.innerHTML =toDisplay.map(product => `
     <div class="product-card">
       <img src="${product.img}" alt="${product.name}">
       <h3>${product.name}</h3>
@@ -58,6 +75,7 @@ function displayProducts(list) {
     </div>
   `).join('');
 }
+
 
 // Filter products
 function filterProducts() {
@@ -70,8 +88,18 @@ function filterProducts() {
     (category === "all" || p.category === category) &&
     p.name.toLowerCase().includes(search)
   );
-
+  
+  visibleCount = 8;
   displayProducts(filtered);
+
+
+  
+// Toggle Load More Button
+if(visibleCount >= list.length){
+  loadMoreBtn.style.display = "none";
+}else{
+  loadMoreBtn.style.display = "block"
+}
 }
 
 // Add to cart
@@ -134,9 +162,17 @@ document.addEventListener("click", function (e) {
   }
 });
 
+loadMoreBtn.addEventListener("click", () => {
+  visibleCount += 4; // or any number you want to load at a time
+  displayProducts(filteredProducts);
+});
+
+
 // Initial load
 window.addEventListener("DOMContentLoaded", async () => {
   await loadCategories();
   updateCartCount();
   displayProducts(products); // just in case fetch fails
 });
+
+
