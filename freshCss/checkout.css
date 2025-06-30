@@ -1,3 +1,4 @@
+/* === Navbar === */
 body {
   font-family: sans-serif;
   padding: 20px;
@@ -10,12 +11,12 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .brand {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
 
 .brand img {
   height: 40px;
@@ -42,10 +43,49 @@ body {
 }
 
 .nav-links a:hover {
-  color: #000000;
+  color: #000;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
 
+/* Mobile navbar styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    background: #0b5ed7;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .nav-links.show {
+    max-height: 500px;
+  }
+
+  .nav-links a {
+    padding: 10px 20px;
+    border-top: 1px solid #eee;
+  }
+}
+
+/* === Checkout === */
 .checkout-container {
   max-width: 600px;
   margin: auto;
@@ -65,28 +105,6 @@ input {
   padding: 8px;
   margin-top: 5px;
 }
-
-.checkout-item {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #ccc;
-  padding: 5px 0;
-}
-
-.btn {
-  background: #0b5ed7;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-.hidden {
-  display: none;
-}
-
-/* checkout item styling */
 
 .checkout-item {
   display: flex;
@@ -121,4 +139,17 @@ input {
   font-weight: bold;
   color: #0b5ed7;
   font-size: 18px;
+}
+
+.btn {
+  background: #0b5ed7;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
 }
