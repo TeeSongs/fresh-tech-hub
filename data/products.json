@@ -1,26 +1,149 @@
 [
-  { "id": 1, "name": "Wireless Earbuds", "price": "190000", "category": "accessories", "img": "../Assets/Images/earpuds.jpg" },
-  { "id": 2, "name": "Smart WristWatch", "price": "3000", "category": "accessories", "img": "../Assets/Images/smartwhristwash.jpg" },
-  { "id": 3, "name": "Phone Charger", "price": "1500", "category": "accessories", "img": "../Assets/Images/charger phone.jpg" },
-  { "id": 4, "name": "phone charger", "price": "17000", "category": "accessories", "img": "../Assets/Images/charger.jpg" },
-  { "id": 5, "name": "watch", "price": "14000", "category": "accessories", "img": "../Assets/Images/man with smartwatch.jpg" },
-  { "id": 6, "name": "powerbank", "price": "20000", "category": "accessories", "img": "../Assets/Images/powerbank.jpg" },
-  { "id": 7, "name": "Accessories", "price": "20000", "category": "accessories", "img": "../Assets/Images/accesories.jpg" },
-
-  { "id": 8, "name": "Ultra Laptop", "price": "250000", "category": "laptops", "img": "../Assets/Images/laptops.jpg" },
-  { "id": 9, "name": "HP Laptop", "price": "280000", "category": "laptops", "img": "../Assets/Images/hplap.jpg" },
-  { "id": 10, "name": "HP Laptop", "price": "278000", "category": "laptops", "img": "../Assets/Images/dell laptop.jpg" },
-  { "id": 11, "name": "Dell Laptop", "price": "890000", "category": "laptops", "img": "../Assets/Images/glasslap.jpg" },
-  { "id": 12, "name": "White Dell Laptop", "price": "890000", "category": "laptops", "img": "../Assets/Images/paris.jpg" },
-
-  { "id": 13, "name": "iphones", "price": "56000", "category": "phones", "img": "../Assets/Images/boxed samsung.jpg" },
-  { "id": 14, "name": "iphone", "price": "500000", "category": "phones", "img": "../Assets/Images/iphonef.jpg" },
-  { "id": 15, "name": "Smartphone X", "price": "120000", "category": "phones", "img": "../Assets/Images/phones.jpg" },
-
-  { "id": 16, "name": "Gaming Pad", "price": "7000", "category": "gaming", "img": "../Assets/Images/gamimg.jpg" },
-  { "id": 17, "name": "Gaming pad", "price": "4000", "category": "gaming", "img": "../Assets/Images/gaming pad hold.jpg" },
-  { "id": 18, "name": "Gaming pad", "price": "6000", "category": "gaming", "img": "../Assets/Images/gaming pad purple.jpg" },
-  { "id": 19, "name": "Gaming pad", "price": "2000", "category": "gaming", "img": "../Assets/Images/gaming pad white.jpg" },
-  { "id": 20, "name": "Gaming pad ", "price": "2000", "category": "gaming", "img": "../Assets/Images/gaming pad yellow.jpg" },
-  { "id": 21, "name": "Double gaming pads", "price": "6000", "category": "gaming", "img": "../Assets/Images/double gaming pads.jpg" }
+  {
+    "id": 1,
+    "name": "Wireless Earbuds",
+    "price": 190000,
+    "category": "accessories",
+    "img": "../Assets/Images/earpuds.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Smart Wristwatch",
+    "price": 3000,
+    "category": "accessories",
+    "img": "../Assets/Images/smartwhristwash.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Phone Charger",
+    "price": 1500,
+    "category": "accessories",
+    "img": "../Assets/Images/charger phone.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Phone Charger Pro",
+    "price": 17000,
+    "category": "accessories",
+    "img": "../Assets/Images/charger.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Smartwatch",
+    "price": 14000,
+    "category": "accessories",
+    "img": "../Assets/Images/man with smartwatch.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Powerbank",
+    "price": 20000,
+    "category": "accessories",
+    "img": "../Assets/Images/powerbank.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Accessories Pack",
+    "price": 20000,
+    "category": "accessories",
+    "img": "../Assets/Images/accesories.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Ultra Laptop",
+    "price": 250000,
+    "category": "laptops",
+    "img": "../Assets/Images/hplap.jpg"
+  },
+  {
+    "id": 9,
+    "name": "HP Laptop",
+    "price": 280000,
+    "category": "laptops",
+    "img": "../Assets/Images/delllap.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Dell Laptop",
+    "price": 278000,
+    "category": "laptops",
+    "img": "../Assets/Images/dell laptop.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Dell Glass Laptop",
+    "price": 890000,
+    "category": "laptops",
+    "img": "../Assets/Images/glasslap.jpg"
+  },
+  {
+    "id": 12,
+    "name": "White Dell Laptop",
+    "price": 890000,
+    "category": "laptops",
+    "img": "../Assets/Images/hplap.jpg"
+  },
+  {
+    "id": 13,
+    "name": "iPhone 12 Boxed",
+    "price": 56000,
+    "category": "phones",
+    "img": "../Assets/Images/fold samsung.jpg"
+  },
+  {
+    "id": 14,
+    "name": "iPhone 14",
+    "price": 500000,
+    "category": "phones",
+    "img": "../Assets/Images/iphonef.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Smartphone X",
+    "price": 120000,
+    "category": "phones",
+    "img": "../Assets/Images/phones.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Gaming Pad Pro",
+    "price": 7000,
+    "category": "gaming",
+    "img": "../Assets/Images/gamimg.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Gaming Pad Hold",
+    "price": 4000,
+    "category": "gaming",
+    "img": "../Assets/Images/gaming pad hold.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Gaming Pad Purple",
+    "price": 6000,
+    "category": "gaming",
+    "img": "../Assets/Images/gaming pad purple.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Gaming Pad White",
+    "price": 2000,
+    "category": "gaming",
+    "img": "../Assets/Images/gaming pad white.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Gaming Pad Yellow",
+    "price": 2000,
+    "category": "gaming",
+    "img": "../Assets/Images/gaming pad yellow.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Double Gaming Pads",
+    "price": 6000,
+    "category": "gaming",
+    "img": "../Assets/Images/double gaming pads.jpg"
+  }
 ]
